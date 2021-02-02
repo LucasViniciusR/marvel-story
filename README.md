@@ -16,10 +16,16 @@ Install the Angular CLI globally:
 npm install -g @angular/cli@7.3.7
 ```
 
-Run the application:
+Install the dependencies
 
 ```
 cd [PROJECT NAME]
+npm i
+```
+
+Run the application:
+
+```
 ng serve
 ```
 
