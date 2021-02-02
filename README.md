@@ -26,3 +26,4 @@ ng serve
 Navigate to `http://localhost:4200/`.
 
 [node.js]: https://nodejs.org/
+[npm]: https://www.npmjs.com/get-npm
