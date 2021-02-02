@@ -13,7 +13,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 Install the Angular CLI globally:
 
 ```
-npm install -g @angular/cli
+npm install -g @angular/cli@7.3.7
 ```
 
 Run the application:
@@ -24,3 +24,5 @@ ng serve
 ```
 
 Navigate to `http://localhost:4200/`.
+
+[node.js]: https://nodejs.org/
