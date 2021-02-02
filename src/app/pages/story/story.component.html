@@ -1,0 +1,33 @@
+<section class="text-center">
+  <h1>{{ story.title }}</h1>
+  <div class="container mt-4 mb-4">
+    <h3>Description</h3>
+    <p class="lead">{{ description == '' ? 'This story has no description' : description }}</p>
+  </div>
+  <div class="container" style="max-width: 40%; min-height: 80vh;">
+    <h3>Characters</h3>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li *ngFor="let character of characters; let i=index" data-target="#carouselExampleIndicators" data-slide-to="i"
+          [ngClass]="(i === 0) ? 'active' : ''"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div *ngFor="let character of characters; let i=index"
+          [ngClass]="(i === 0) ? 'carousel-item active' : 'carousel-item'">
+          <img class="d-block w-100" src="{{ character.thumbnail.path+'.'+character.thumbnail.extension }}">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>{{ character.name }}</h5>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+</section>

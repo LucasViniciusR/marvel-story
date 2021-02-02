@@ -1,0 +1,20 @@
+footer {
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+    background-color: rgb(0, 0, 0);
+  }
+
+header {
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    font-family: fontMarvel;
+    color: white;
+}
+
+.footerMarvel {
+    text-decoration: none;
+    color: white;
+}
+
