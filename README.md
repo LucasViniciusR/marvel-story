@@ -1,4 +1,4 @@
-# MarvelStory - 0.1.0
+# MarvelStory - 1.0.0
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.7.
 
@@ -16,7 +16,7 @@ Install the Angular CLI globally:
 npm install -g @angular/cli@7.3.7
 ```
 
-Install the dependencies
+Install the dependencies:
 
 ```
 cd [PROJECT NAME]

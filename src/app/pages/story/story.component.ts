@@ -8,7 +8,6 @@ import { MarvelStoryService } from 'src/app/services/marvel-story.service';
 })
 export class StoryComponent implements OnInit {
 
-  information: String = 'aaaaaaaaa';
   story: any = {};
   description: String;
   characters: any = [];
@@ -19,8 +18,6 @@ export class StoryComponent implements OnInit {
 
   ngOnInit() {
     this.getStory();
-    
-
   }
 
   getStory() {
@@ -30,9 +27,8 @@ export class StoryComponent implements OnInit {
         this.marvelStoryService.getStory(Math.floor((Math.random()*max)+1)).toPromise().then(
           story => {
             this.story = story.data.results[0];
-            this.description = this.story.description;
-            console.log(this.story)
-            this.getCharacters(this.story.id);
+            this.description = story.data.results[0].description;
+            this.getCharacters(story.data.results[0].id);
           }
         );
       }
@@ -43,20 +39,7 @@ export class StoryComponent implements OnInit {
     this.marvelStoryService.getCharacters(storyId).toPromise().then(
       characters => {
         this.characters = characters.data.results;
-        console.log(this.characters)
       }
     );
   }
-
-
-
 }
-
-
-// this.permissoesService.buscarInfoUsuario().toPromise().then(
-//   infos => {
-//     this.infoUsuario = infos;
-//     this.buscarPermissoes(infos.id_usuario);
-//   },
-//   error => console.log('error', error)
-// );
